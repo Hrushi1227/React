@@ -1,0 +1,21 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "first",
+  "main": "main.js",
+  "scripts": {
+    "test": "demo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Hrushi0103"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "Rushi",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.1"
+  }
+}
