@@ -13,8 +13,9 @@ class Header extends Component {
     }
 
     Func_name_handle = (event_var) => {
-        console.log(event_var.target.value)
+        // console.log(event_var.target.value)
         this.setState({ keyword: event_var.target.value ? event_var.target.value : 'User Text Here' })
+        this.props.userText(event_var.target.value)
     }
 
     render() {
