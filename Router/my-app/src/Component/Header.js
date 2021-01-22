@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
+    console.log("inside Header ", props);
     return (
 
         <header>
@@ -41,7 +42,7 @@ const Header = () => {
 
 }
 
-export default Header;
+export default withRouter(Header);
 
 
 

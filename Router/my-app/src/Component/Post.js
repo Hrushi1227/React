@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Post = () => {
+const Post = (props) => {
+    console.log("inside Post ", props);
     return (
         <div className="panel panel-primary">
             <div className="panel-heading">

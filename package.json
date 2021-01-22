@@ -16,6 +16,7 @@
   "author": "Rushi",
   "license": "ISC",
   "dependencies": {
+    "create-react-app": "^4.0.1",
     "react": "^17.0.1"
   }
 }
