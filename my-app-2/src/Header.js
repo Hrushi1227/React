@@ -15,7 +15,7 @@ const Header = () => {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <Link className="navbar-brand" to="/">Devloper Funner</Link>
+                        <Link className="navbar-brand" to="/">Devloper Funnel</Link>
 
                     </div>
                     <div className="collapse navbar-collapse" id="myNavbar">
