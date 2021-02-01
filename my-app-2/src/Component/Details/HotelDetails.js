@@ -61,7 +61,7 @@ class HotelDetails extends Component {
                         </div>
                         <br />
                         <Link to={`/list/${this.state.tripid}`} className="btn btn-danger">Back</Link> &nbsp;
-                        <Link to="/" className="btn btn-success">Place Booking</Link>
+                        <Link to={`/booking/${details.name}`} className="btn btn-success">Place Booking</Link>
                     </div>
                 </div >
 

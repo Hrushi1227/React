@@ -1,0 +1,74 @@
+{
+  "Booking": [
+    {
+      "id": 481,
+      "hotel_name": "DoubleTree by Hilton",
+      "name": "",
+      "phone": "",
+      "count": ""
+    },
+    {
+      "id": 485,
+      "hotel_name": "Hotel Sapphire",
+      "name": "",
+      "phone": "",
+      "count": ""
+    },
+    {
+      "id": 877,
+      "hotel_name": "Hotel Sapphire",
+      "name": "RUSHIKESH",
+      "phone": "7757872754",
+      "count": "3"
+    },
+    {
+      "id": 709,
+      "hotel_name": "Hotel Sapphire",
+      "name": "",
+      "phone": "",
+      "count": ""
+    },
+    {
+      "id": 366,
+      "hotel_name": "Vivaan - The Sun Rise",
+      "name": "RUSHIKESH",
+      "phone": "7757872754",
+      "count": ""
+    },
+    {
+      "id": 978,
+      "hotel_name": "The Corinthians Resort",
+      "name": "RUSHIKESH",
+      "phone": "7757872754",
+      "count": ""
+    },
+    {
+      "id": 446,
+      "hotel_name": "The Corinthians Resort",
+      "name": "RUSHIKESH",
+      "phone": "7757872754",
+      "count": ""
+    },
+    {
+      "id": 773,
+      "hotel_name": "The Corinthians Resort",
+      "name": "RUSHIKESH",
+      "phone": "7757872754",
+      "count": ""
+    },
+    {
+      "id": 389,
+      "hotel_name": "Snow Bliss",
+      "name": "RUSHIKESH",
+      "phone": "7757872754",
+      "count": ""
+    },
+    {
+      "id": 976,
+      "hotel_name": "Hometel Chandigarh",
+      "name": "Ghatol",
+      "phone": "7757872754",
+      "count": "4"
+    }
+  ]
+}
