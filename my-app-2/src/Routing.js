@@ -4,13 +4,15 @@ import Footer from './Footer';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './Component/Home/Home';
 import Listapi from './Component/Listing/listingApi';
+import HotelDetails from './Component/Details/HotelDetails'
 
 const Routing = () => {
     return (
         <BrowserRouter>
             <Header />
             <Route exact path="/" component={Home} />
-            <Route exact path="/list/:id" component={Listapi} />
+            <Route path="/list/:id" component={Listapi} />
+            <Route path="/details/:id" component={HotelDetails} />
             <Footer />
         </BrowserRouter>
     )

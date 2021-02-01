@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ListingDisp from './listingDisp'
+import ListingDisp from './listingDisp';
+import RoomFilter from '../Filters/RoomFilter';
+import CostFilter from '../Filters/CostFilter';
+
 
 const url = "https://developerfunnel.herokuapp.com/hotellist";
 
@@ -14,11 +17,17 @@ class Listing extends Component {
         }
     }
 
+    setDataAsPerFilter = (SortedData) => {
+        this.setState({ hotelslist: SortedData })
+    }
+
+
     render() {
         return (
             <div className="row">
                 <div className="col-md-2">
-                    Filter Here!
+                    <RoomFilter RoomPerType={(data) => { this.setDataAsPerFilter(data) }} />
+                    <CostFilter CostPerType={(data) => { this.setDataAsPerFilter(data) }} />
 
                 </div>
                 <div className="col-md-10">
@@ -35,6 +44,7 @@ class Listing extends Component {
     componentDidMount() {
 
         var tripid = this.props.match.params.id;
+        sessionStorage.setItem('tripid', tripid)
         axios.get(`${url}/${tripid}`)
             .then((response) => { this.setState({ hotelslist: response.data }) })
     }
