@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css'
+import QuickDisplay from './QuickDisplay';
 
 const lurl = "https://developerfunnel.herokuapp.com/location";
 const hurl = "https://developerfunnel.herokuapp.com/hotels?city=";
@@ -18,7 +19,7 @@ class Search extends Component {
         if (data) {
             return data.map((item) => {
                 return (
-                    <option value={item.city}>
+                    <option value={item.city} >
                         {item.city_name}
                     </ option>
 
@@ -72,7 +73,7 @@ class Search extends Component {
                         <option>----Select City-----</option>
                         {this.renderCity(this.state.location)}
                     </select>
-                    <select className="reataurantsinput">
+                    <select className="reataurantsinput" >
                         <option >----Select Restaurent-----</option>
                         {this.renderHotels(this.state.hotels)}
                     </select>
