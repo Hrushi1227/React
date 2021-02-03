@@ -1,90 +1,47 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-
-
-const lurl = "https://developerfunnel.herokuapp.com/hotellist";
-
-// assignment -   https://developerfunnel.herokuapp.com/hotellist/1?hcost=1000&lcost=500
-
-
-
-//const lurl = "https://developerfunnel.herokuapp.com/hotellist/1?roomtype=1"
-
-
+const curl = "https://developerfunnel.herokuapp.com/hotellist";
 
 class CostFilter extends Component {
-
-
-    CostFilterValue = (event) => {
-        //let roomId = event.target.value;
-        // console.log(event.target.value);
-        let Price_Room = event.target.value;
-        let tripID = sessionStorage.getItem('tripid');
-
-        let roomurl;
-
-        let max = event.target.value;
-        console.log(event.target.value)
-
-        let min = event.target.min;
-        //console.log(event.target.min)
-
-        if (Price_Room == '') {
-            roomurl = `${lurl}/${tripID}`
-            //console.log(roomurl);
+    filterRoom = (event) => {
+        let cost = (event.target.value).split(',')
+        let lcost = cost[0];
+        let hcost = cost[1];
+        let tripId = sessionStorage.getItem('tripid');
+        let costurl;
+        if (cost == '') {
+            costurl = `${curl}/${tripId}`
         } else {
-            roomurl = `${lurl}/${tripID}?hcost=${max}&lcost=${min}`
-            console.log(roomurl);
+            costurl = `${curl}/${tripId}?hcost=${hcost}&lcost=${lcost}`
         }
-
-        axios.get(roomurl)
-            //.then((response) => { console.log(response.data) })
-            .then((response) => { this.props.CostPerType(response.data) })
-
-
+        axios.get(costurl)
+            .then((response) => { this.props.roomPerCost(response.data) })
     }
-
-
     render() {
         return (
             <React.Fragment>
-
-                <center> Cost Flter .</center>
-                <div onChange={this.CostFilterValue} >
-
-
-
-                    <input type="range" min="100" value="" max="10000" class="radio" id="myRange" ></input>
-
+                <center>Room Type</center>
+                <div onChange={this.filterRoom}>
                     <label className="radio">
-                        <input type="radio" value="" name="room" />All Prices
+                        <input type="radio" value="" name="room" />All
                     </label>
                     <label className="radio">
-                        <input type="radio" value="1" name="room" />100-1000
+                        <input type="radio" value="1000,3000" name="room" />1000-3000
                     </label>
                     <label className="radio">
-                        <input type="radio" value="2" name="room" />1001-3000
+                        <input type="radio" value="3001,6000" name="room" />3001-6000
                     </label>
                     <label className="radio">
-                        <input type="radio" value="3" name="room" />3001-6000
+                        <input type="radio" value="6001,9000" name="room" />6001-9000
                     </label>
                     <label className="radio">
-                        <input type="radio" value="4" name="room" />6000-10000
-
+                        <input type="radio" value="9001,12000" name="room" />9001-12000
                     </label>
-
-
                 </div>
-
             </React.Fragment>
-
-
         )
-
     }
-
 }
-
 
 export default CostFilter;

@@ -5,6 +5,7 @@ import RoomFilter from '../Filters/RoomFilter';
 import CostFilter from '../Filters/CostFilter';
 
 
+
 const url = "https://developerfunnel.herokuapp.com/hotellist";
 
 
@@ -27,7 +28,8 @@ class Listing extends Component {
             <div className="row">
                 <div className="col-md-2">
                     <RoomFilter RoomPerType={(data) => { this.setDataAsPerFilter(data) }} />
-                    <CostFilter CostPerType={(data) => { this.setDataAsPerFilter(data) }} />
+                    <CostFilter roomPerCost={(data) => { this.setDataAsPerFilter(data) }} />
+
 
                 </div>
                 <div className="col-md-10">
