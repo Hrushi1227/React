@@ -27,10 +27,7 @@ class LoginComponent extends Component {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(this.state)
-
-
             })
-
             .then((res) => res.json())
             //.then((data) => { console.log(data) })  to see the TOken 
             .then((data) => {
