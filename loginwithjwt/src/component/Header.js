@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 
     return (
-
+        // <li><Link to="/users">Users</Link></li>
         <header>
 
             <nav className="navbar navbar-inverse">
@@ -20,9 +20,6 @@ const Header = () => {
                     </div>
                     <div className="collapse navbar-collapse" id="myNavbar">
                         <ul className="nav navbar-nav">
-
-                            <li><Link to="/users">Users</Link></li>
-
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                             <li><Link to="/"><span className="glyphicon glyphicon-user"></span> Sign Up</Link></li>

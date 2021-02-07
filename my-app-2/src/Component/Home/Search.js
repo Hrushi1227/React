@@ -67,9 +67,9 @@ class Search extends Component {
     render() {
         return (
             <div className="imageContainer">
-                <h1>Search</h1>
+
                 <div id="logo">
-                    D!
+                    Ʀ!
                 </div>
                 <div className="heading">
                     Plan Trip With US
